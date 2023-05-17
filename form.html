@@ -35,30 +35,97 @@
         </ul>
       </nav>
 
-    <div class="header__title">
-    <h1>Оформление кредита</h1>
-    <form class="modal__form" action="/submit-credit" method="post">
+    <div class="modal__header">
+<h1>Application form</h1>
+    <form class="modal-form" action="/submit-credit" method="post">
         <div>
-            <label for="name">Имя:</label>
+            <label for="name">Enter your name: </label>
             <input type="text" id="name" name="name" required>
         </div>
         <div>
-            <label for="email">Email:</label>
+            <label for="email">Enter your email:</label>
             <input type="email" id="email" name="email" required>
         </div>
         <div>
-            <label for="amount">Сумма кредита:</label>
-            <input type="number" id="amount" name="amount" required>
+          <label for="birth_date">Enter your birth date:</label>
+          <input type="date" id="birth_date" name="birth_date" required>
         </div>
         <div>
-            <label for="duration">Срок кредита (в месяцах):</label>
+          <label for="pass_nummer">Enter your passport pass nummer:</label>
+          <input type="text" id="pass_nummer" name="pass_nummer" required>
+        </div>
+        <div>
+          <label for="citizenship">Enter your citizenship:</label>
+          <input type="text" id="citizenship" name="citizenship" required>
+        </div>
+        <div>
+          <label for="address">Enter your address:</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        <div>
+          <label for="phone_number">Enter your phone number:</label>
+          <input type="text" id="phone_number" name="phone_number" required>
+        </div>
+
+        <div>
+          <label for="family_status">Enter your family status:</label>
+          <input type="text" id="family_status" name="family_status" required>
+        </div>
+        <div>
+          <label for="work_place">Enter work place:</label>
+          <input type="text" id="work_place" name="work_place" required>
+        </div>
+        <div>
+          <label for="monthly_salary">Enter your monthly salary:</label>
+          <input type="text" id="monthly_salary" name="monthly_salary" required>
+        </div>
+        <div>
+          <label for="loan_type">Enter your loan type:</label>
+          <input type="number" id="loan_type" name="loan_type" required>
+        </div>
+
+        <div>
+            <label for="amout">Enter your recieving cash:</label>
+            <input type="number" id="amout" name="amout" required>
+        </div>
+        <div>
+            <label for="duration">Enter your requested date (amount month):</label>
             <input type="number" id="duration" name="duration" required>
         </div>
         <div >
-            <button class="btn btn--show-modal" type="submit">Отправить</button>
+            <button class="btn btn--show-modal" type="submit">Send</button>
         </div>
     </form>
     </div>
     </header>
+
+    <section class="section section--end">
+      <div class="section__title">
+      </div>
+    </section>
+
+<footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="about.html">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="terms.html">Terms of Use</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="contacts.html">Contact Us</a>
+        </li>
+      </ul>
+      <img src="img/icon.png" alt="Logo" class="footer__logo" />
+      <p class="footer__copyright">
+        &copy; Copyright by
+        <a
+          class="footer__link twitter-link"
+          target="_blank"
+          href="#"
+          >SaKa</a>
+      </p>
+    </footer>
+
   </body>
 </html>
