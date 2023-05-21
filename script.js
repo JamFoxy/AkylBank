@@ -13,6 +13,67 @@ const navEl = document.querySelectorAll('.nav__link');
 const navLinks = document.querySelector('.nav__links');
 const navBar = document.querySelector('.nav');
 
+
+// Update requests
+
+// Функция для обновления количества заявок
+function updateRequestCount() {
+  // Здесь вы можете использовать AJAX-запрос для получения количества заявок из вашей базы данных
+  // Например, если у вас есть API для получения этой информации, вы можете сделать что-то вроде:
+  // fetch('ваш_урл_для_запроса_количества_заявок')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     const requestCountElement = document.getElementById('requestCount');
+  //     requestCountElement.textContent = data.count;
+  //   })
+  //   .catch(error => {
+  //     console.error('Ошибка получения количества заявок:', error);
+  //   });
+
+  // Вместо AJAX-запроса я просто сгенерирую случайное число для примера
+  const requestCount = Math.floor(Math.random() * 100); // Замените на ваш код получения количества заявок из базы данных
+  const requestCountElement = document.getElementById('requestCount');
+  requestCountElement.textContent = requestCount;
+}
+
+// Вызовите функцию для обновления количества заявок при загрузке страницы
+updateRequestCount();
+
+// To See All Aplications
+
+// Функция для получения и отображения списка заявок
+function displayRequests() {
+  const requestListElement = document.getElementById('requestList');
+
+  // Здесь вы можете использовать AJAX-запрос для получения списка заявок из вашей базы данных
+  // Например, если у вас есть API для получения списка заявок, вы можете сделать что-то вроде:
+  // fetch('ваш_урл_для_запроса_списка_заявок')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     data.requests.forEach(request => {
+  //       const listItem = document.createElement('li');
+  //       listItem.textContent = request;
+  //       requestListElement.appendChild(listItem);
+  //     });
+  //   })
+  //   .catch(error => {
+  //     console.error('Ошибка получения списка заявок:', error);
+  //   });
+
+  // Вместо AJAX-запроса я просто добавлю некоторые случайные заявки для примера
+  const requests = ['Заявка 1', 'Заявка 2', 'Заявка 3', 'Заявка 4', 'Заявка 5']; // Замените на ваш код получения списка заявок из базы данных
+
+  requests.forEach(request => {
+    const listItem = document.createElement('li');
+    listItem.textContent = request;
+    requestListElement.appendChild(listItem);
+  });
+}
+
+// Вызовите функцию для отображения списка заявок при загрузке страницы
+displayRequests();
+
+
 // modal window:
 
 const openModal = function () {
